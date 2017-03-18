@@ -1,0 +1,84 @@
+
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录/注册</title>
+<link href="../css/amazeui.css" rel="stylesheet" type="text/css">
+<link href="../css/dlstyle.css" rel="stylesheet" type="text/css">
+<link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="../js/jquery-3.1.1.min.js"></script>
+<script language="javascript" src="../js/amazeui.js"></script>
+</head>
+<body>
+<header class="am-topbar">
+  <h1 class="am-topbar-brand" style="margin-left:5px;"> <a href="home.php">szutic</a> </h1>
+</header>
+<div class="res-banner">
+  <div class="res-main">
+    <div class="login-banner-bg"><span></span><img src="../img/bg_login.png" /></div>
+    <div class="login-box">
+      <div class="am-tabs" id="doc-my-tabs">
+        <ul class="am-tabs-nav am-nav am-nav-tabs am-nav-justify">
+          <li class="am-active"><a href="">登录</a></li>
+          <li><a href="">注册</a></li>
+        </ul>
+        <div class="am-tabs-bd">
+          <div class="am-tab-panel am-active">
+            <!--login-->
+            <form method="post" action="backend-login.php">
+              <div class="user-email">
+                <label for="userID"><i class="am-icon-credit-card-alt"></i></label>
+                <input type="text" name="userID" id="userID" placeholder="请输入学号">
+              </div>
+              <div class="user-pass">
+                <label for="password"><i class="am-icon-lock"></i></label>
+                <input type="password" name="passwd" id="password" placeholder="请输入密码">
+              </div>
+              <div class="am-cf">
+                <input type="submit" value="登录" class="am-btn am-btn-primary am-btn-sm am-fl">
+              </div>
+            </form>
+          </div>
+
+          <div class="am-tab-panel">
+            <!--signup-->
+            <form method="post" action="backend-signup.php">
+              <div class="user-phone">
+                <label for="name"><i class="am-icon-github"></i></label>
+                <input type="text" name="name" id="name" placeholder="输入昵称">
+              </div>
+              <div class="user-phone">
+                <label for="userID"><i class="am-icon-credit-card-alt"></i></label>
+                <input type="number" name="userID" id="userID" placeholder="输入学号">
+              </div>
+              <div class="user-pass">
+                <label for="password"><i class="am-icon-lock"></i></label>
+                <input type="password" name="passwd" id="password" placeholder="设置密码">
+              </div>
+              <div class="user-pass">
+                <label for="passwordRepeat"><i class="am-icon-lock"></i></label>
+                <input type="password" name="passwd2" id="passwordRepeat" placeholder="确认密码">
+              </div>
+              <div class="am-cf">
+                <input type="submit" value="注册" class="am-btn am-btn-primary am-btn-sm am-fl">
+              </div>
+            </form>
+            <hr>
+          </div>
+          <script>
+              $(function() {
+                  $('#doc-my-tabs').tabs();
+                })
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="am-footer">
+  <p align="center">&copy; Copyright 2017 by szutic </p>
+</footer>
+</body>
+</html>
